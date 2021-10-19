@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alquilar Juegos</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/misfunciones.js"></script>
+    
+    </head>
+
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        </style>
+
+
+<body>
+
+<h1 style="text-align:center">Alquiler de Juegos </h1>
+
+
+<!-- Category -->
+
+<h2 style="text-align:center">Categorias </h2>
+
+
+<button onclick="traerInformacion_category()" >Consultar categorias</button>
+
+<h2 style="text-align:center"> </h2>
+
+<div id="resultado_category"></div>
+
+<h2 style="text-align:center"> </h2>
+
+<button onclick="guardarInformacion_category()">Insertar categoria</button>
+<!--  <button onclick="editarInformacion_message()">Actualizar categoria</button> -->
+
+<h2 style="text-align:center"> </h2>
+
+<div>
+    
+    <input type="text" id="name_category" placeholder="name"> 
+    <input type="text" id="description_category" placeholder="descripcion">
+    
+    
+</div>
+
+
+
+
+
+<!-- Juegos. -->
+
+<h2 style="text-align:center">Datos Juegos </h2>
+
+
+<button onclick="traerInformacion_games()" >Consultar Juegos</button>
+
+<h2 style="text-align:center"> </h2>
+
+<div id="resultado_games"></div>
+
+<h2 style="text-align:center"> </h2>
+
+<button onclick="guardarInformacion_games()">Insertar Juego</button>
+<!-- <button onclick="editarInformacion_games()">Actualizar Juego</button> -->
+
+<h2 style="text-align:center"> </h2>
+
+<div>
+    <input type="text" id="name_games" placeholder="name">
+    <input type="text" id="developer" placeholder="developer">
+    <input type="number" id="year_game" placeholder="year">
+    <input type="text" id="description_game" placeholder="description">
+    <!--    <input type="number" id="category_id" placeholder="category_id"> -->
+    
+</div>
+
+
+<!-- Clientes. -->
+
+    
+<h2 style="text-align:center">Datos Clientes </h2>
+
+
+<button onclick="traerInformacion()" >Consultar</button>
+
+<h2 style="text-align:center"> </h2>
+
+<div id="resultado"></div>
+
+<h2 style="text-align:center"> </h2>
+
+<button onclick="guardarInformacion()">Insertar cliente</button>
+<!-- <button onclick="editarInformacion()">Actualizar cliente</button> -->
+
+<h2 style="text-align:center"> </h2>
+
+<div>
+<!--    <input type="number" id="id" placeholder="id"> -->
+    <input type="text" id="name" placeholder="name">
+    <input type="text" id="email" placeholder="email">
+    <input type="number" id="age" placeholder="age">
+    <input type="text" id="password" placeholder="password">
+</div>
+
+
+
+
+
+<!-- Mensajes. -->
+
+<h2 style="text-align:center">Datos Mensajes </h2>
+
+
+<button onclick="traerInformacion_message()" >Consultar Mensajes</button>
+
+<h2 style="text-align:center"> </h2>
+
+<div id="resultado_message"></div>
+
+<h2 style="text-align:center"> </h2>
+
+<button onclick="guardarInformacion_message()">Insertar Mensaje</button>
+<!--  <button onclick="editarInformacion_message()">Actualizar Mensaje</button> -->
+
+<h2 style="text-align:center"> </h2>
+
+<div>
+  <!--  <input type="number" id="id_message" placeholder="id"> -->
+    <input type="text" id="messagetext" placeholder="messagetext">
+    
+</div>
+
+<!-- Reservation. -->
+
+<h2 style="text-align:center">Reservaciones </h2>
+
+
+<button onclick="traerInformacion_reservation()" >Consultar Reservas</button>
+
+<h2 style="text-align:center"> </h2>
+
+<div id="resultado_reservation"></div>
+
+<h2 style="text-align:center"> </h2>
+
+<button onclick="guardarInformacion_reservation()">Insertar Reservacion</button>
+<!--  <button onclick="editarInformacion_message()">Actualizar Reservacion</button> -->
+
+<h2 style="text-align:center"> </h2>
+
+<div>
+    <input type="text" id="startDate" placeholder="startDate"> 
+    <input type="text" id="devolutionDate" placeholder="devolutionDate">
+    <input type="text" id="status" placeholder="status">
+    <input type="text" id="score" placeholder="score">
+    
+</div>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
+
+
