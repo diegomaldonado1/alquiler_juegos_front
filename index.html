@@ -16,37 +16,71 @@
 
 <body>
 
-<h1 style="text-align:center">Alquiler de Juegos </h1>
+    <h1 style="text-align:center">Alquiler de Juegos </h1>
+
+    <!-- Reportes-->
+
+    <h2 style="text-align:center"> Reportes Alquiler de Juegos</h2>
+
+    <h3 > Reporte estado de reservas</h3>
+
+    <button onclick="traerReporteStatus()"> Generar Reporte estado de reservas </button>
+
+    <h2 style="text-align:center"> </h2>
+
+    <div id="resultadoStatus"></div>
+
+    <h2 style="text-align:center"> </h2>
+    
+    <h3 > Reporte por fechas</h3>
+    
+    <h2 style="text-align:center"> </h2>
+
+    <button onclick="traerReporteDate()"> Generar Reporte por fecha </button>
+
+    <h2 style="text-align:center"> </h2>
+    <input type="date" id="RstarDate" placeholder="descripcion">
+    <input type="date" id="RdevolutionDate" placeholder="descripcion">
+    
+    <h2 style="text-align:center"> </h2>
+    
+    <input id="Rdate" size="90" disabled >
+    <br> 
+    <h2 style="text-align:center"> </h2>
+    <div id="resultadoDate"></div>
+
+    <h2 style="text-align:center"> </h2>
+
+    <h3 > Reporte Clientes y reservas</h3>
+    
+    <h2 style="text-align:center"> </h2>
+
+    <button onclick="traerReporteClientes()"> Generar Reporte Clientes y Cantidad de reservas por cliente </button>
+    <h2 style="text-align:center"> </h2>
+    <div id="resultadoClientes"></div>
+    <h2 style="text-align:center"> </h2>
+
+
+
+
 
 
 <!-- Category -->
 
 <h2 style="text-align:center">Categorias </h2>
-
-
 <button onclick="traerInformacion_category()" >Consultar categorias</button>
-
 <h2 style="text-align:center"> </h2>
-
 <div id="resultado_category"></div>
-
 <h2 style="text-align:center"> </h2>
-
 <button onclick="guardarInformacion_category()">Insertar categoria</button>
 <!--  <button onclick="editarInformacion_message()">Actualizar categoria</button> -->
-
 <h2 style="text-align:center"> </h2>
-
 <div>
-    
+
     <input type="text" id="name_category" placeholder="name"> 
     <input type="text" id="description_category" placeholder="descripcion">
     
-    
 </div>
-
-
-
 
 
 <!-- Juegos. -->
@@ -72,11 +106,18 @@
     <input type="text" id="developer" placeholder="developer">
     <input type="number" id="year_game" placeholder="year">
     <input type="text" id="description_game" placeholder="description">
+    <select id="games_category"></select>
     <!--    <input type="number" id="category_id" placeholder="category_id"> -->
     
 </div>
 
-
+<script type="text/javascript">
+    window.onload = autoInicioCategoria();
+    window.onload = autoclient_message();
+    window.onload = autogame_message();
+    window.onload = autoclient_reservation();
+    window.onload = autogame_reservation();
+</script>
 <!-- Clientes. -->
 
     
@@ -122,6 +163,8 @@
 <h2 style="text-align:center"> </h2>
 
 <button onclick="guardarInformacion_message()">Insertar Mensaje</button>
+
+
 <!--  <button onclick="editarInformacion_message()">Actualizar Mensaje</button> -->
 
 <h2 style="text-align:center"> </h2>
@@ -129,7 +172,8 @@
 <div>
   <!--  <input type="number" id="id_message" placeholder="id"> -->
     <input type="text" id="messagetext" placeholder="messagetext">
-    
+    <select id="message_client"></select>
+    <select id="message_game"></select>
 </div>
 
 <!-- Reservation. -->
@@ -155,6 +199,8 @@
     <input type="text" id="devolutionDate" placeholder="devolutionDate">
     <input type="text" id="status" placeholder="status">
     <input type="text" id="score" placeholder="score">
+    <select id="reservation_client"></select>
+    <select id="reservation_game"></select>
     
 </div>
 
