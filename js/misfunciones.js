@@ -822,12 +822,12 @@ function traerReporteStatus(){
         datatype:"JSON",
         success:function(respuesta){
             console.log(respuesta);
-            pintarRespuesta(respuesta);
+            pintarRespuestaStatus(respuesta);
         }
     });
 }
 
-function pintarRespuesta(respuesta){
+function pintarRespuestaStatus(respuesta){
 
     let myTable=`<table style="width:100%">`;
         myTable+= "<tr>" ;
